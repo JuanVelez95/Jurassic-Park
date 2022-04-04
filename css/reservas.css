@@ -1,0 +1,51 @@
+.reservas-titulo{
+    font-family: 'jurassic_parkregular';
+    letter-spacing: .2em;
+    text-align: center;
+    font-size: 4em;
+    text-decoration: underline;
+}
+
+#visitanos{
+    display: flex;
+    justify-content: space-around;
+    padding: 3em;
+}
+
+.compra label{
+    font-family: 'Red Hat Mono';
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.compra form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+.campo-texto{
+    font-family: 'Red Hat Mono';
+    font-size: 1.2em;
+    height: 2em;
+    padding-left: .3em;
+    background: #443113 url("../js/jquery-ui-1.13.1.custom/images/ui-bg_diamond_8_443113_10x8.png") 50% 50% repeat;
+    border: 1px solid #efec9f;
+    color: #efec9f;
+    border-radius: 5px;
+    margin-top: .2em;
+}
+
+#spinner{
+    width: 10em;
+}
+
+#btn-form{
+    margin-top: 1.25em;
+    width: 8em;
+}
+
+.aside img{
+    width: 25em;
+    border-radius: 20px;
+}

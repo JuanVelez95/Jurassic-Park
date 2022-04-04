@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic Park | Fan Page</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/Jurassic-Park-Logo.png" type="image/x-icon">
+    <!-- Tema para JQueryUI -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+    <!-- Link a CSS externo -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- CDN JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Libreria JQueryUI -->
+    <script src="../js/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+    <!-- Review plugin -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <!-- Link a las Media Queries -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script>
+        $().ready(function () {
+            
+//Efecto de ítems del menú
+            $(".menu li").on("click", function () {
+                $(this).effect("puff", {}, 1000, function () {
+                    $(this).show();
+                });
+            });
+
+//Config del datepicker
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '< Ant',
+                nextText: 'Sig >',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+                dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+                };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+            $("#datepicker").datepicker();
+
+//Confimación de la reserva
+            let cuadro_dialogo = $("#dialog").dialog({
+                autoOpen: false, 
+                height: "auto", 
+                width: 600, 
+                modal: true, 
+                resizable: false,
+				buttons: [{
+					text: "OK",
+					click: function() {
+						$(this).dialog("close");
+                        $("form").submit();
+                        alert("Muchas gracias por su reserva, le llegaran a su mail: '" + $("form input:eq(1)").val() + "' todos los detalles. ¡Que disfrute!");
+					}
+				},{
+					text: "CANCELAR",
+					click: function(){
+						$(this).dialog("close"); 
+					}
+				}]
+            });
+
+            function confirm(){
+                if ($("form input:eq(0)").val() != "" && $("form input:eq(1)").val() != "" && $("form input:eq(2)").val() > 0 && $("form input:eq(3)").val() != "") {
+                    return true
+                }
+            }
+
+            $("#btn-form").on("click", function(e){
+                e.preventDefault();
+                if (confirm()) {
+                    $("#nombre").text("Señor/a " + $("form input:eq(0)").val());
+                    $("#entradas").text("¿Confirma la reserva de " + $("form input:eq(2)").val() + " entradas?");
+                    $("#fecha").text("Para la fecha de " + $("form input:eq(3)").val());
+                    cuadro_dialogo.dialog("open");
+                } else {
+                    alert("¡Complete todos los campos!");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="cabecera">
+        <h1 class="encabezado">Jurassic Park</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="info.html">Información</a></li>
+                <li><a href="#">Visitanos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <h3 class="reservas-titulo">¡Ven a visitarnos!</h3>
+
+        <section id="visitanos">
+            <article class="compra">
+                <form>
+                    <label for="nombre">Nombre y Apellidos</label>
+                    <input type="text" class="campo-texto" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="campo-texto" required>
+                    <label for="entradas">Cantidad de entradas</label>
+                    <input type="number" name="entradas" class="campo-texto" min="0" max="10" required>
+                    <label for="fecha">Fecha</label>
+                    <input type="text" id="datepicker" class="campo-texto" required>
+                    <input type="submit" value="RESERVAR" class="btn-enviar" id="btn-form">
+                </form>
+            </article>
+
+            <article class="aside">
+                <img src="../img/parque-turistico.jpg" alt="parque turistico de Jurassic Park">
+            </article>
+
+        </section>
+
+        <section class="review">
+            <div class="elfsight-app-a026ba38-9454-4139-a8e8-2f9f595baf14"></div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="persona">
+            <h4 class="nombre"><i>Velez Ignacio</i></h4>
+            <p class="curso">Curso de Programación Web</p>
+        </div>
+        <div class="newslatter">
+            <h4>¡Suscribete a nuestro Newslatter!</h4>
+            <form>
+                <input type="email" placeholder="Email" class="newslatter-input" required>
+                <input type="submit" value="ENVIAR" class="btn-enviar">
+            </form>
+        </div>
+    </footer>
+
+    <!-- CUADRO DE DIALOGO -->
+    <div title="Confirmar Reserva" id="dialog">
+        <p id="nombre"></p>
+        <p id="entradas"></p>
+        <p id="fecha"></p>
+    </div>
+    
+</body>
+
+</html>

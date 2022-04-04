@@ -1,0 +1,26 @@
+
+@media (max-width: 600px) {
+    #visitanos{
+        flex-direction: column;
+    }
+    .campo-texto{
+        width: 10em;
+    }
+    #btn-form{
+        margin-left: 1em;
+    }
+    .aside img{
+        margin-top: 2em;
+        width: 20em;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    #visitanos{
+        flex-direction: column;
+    }
+    .aside img{
+        margin: 2em 0 0 7em;
+        width: 27em;
+    }
+}

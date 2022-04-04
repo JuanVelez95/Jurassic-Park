@@ -1,0 +1,11 @@
+
+@media (max-width: 600px) {
+    #contacto{
+        flex-direction: column;
+    }
+    .maps iframe{
+        margin: auto;
+        width: 20em;
+        height: 17em;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic Park | Fan Page</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/Jurassic-Park-Logo.png" type="image/x-icon">
+    <!-- Tema para JQueryUI -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+    <!-- Link a CSS externo -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- CDN JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Libreria JQueryUI -->
+    <script src="../js/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+    <!-- JQuery fancybox plugin files -->
+    <link rel="stylesheet" href="../plug-in/fancybox-2.1.7/source/jquery.fancybox.css">
+    <script src="../plug-in/fancybox-2.1.7/source/jquery.fancybox.pack.js"></script>
+    <script src="../plug-in/fancybox-2.1.7/source/jquery.fancybox.js"></script>
+    <!-- Link a las Media Queries -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script>
+        $().ready(function () {
+//Efecto de ítems del menú
+            $(".menu li").on("click", function () {
+                $(this).effect("puff", {}, 1000, function () {
+                    $(this).show();
+                });
+            });
+//Fancybox
+            $("a.fancybox").fancybox({
+                afterClose: function(){
+                    $("a.fancybox").show();
+                }
+            });
+//Accordion
+            $(".col-right").accordion({
+                collapsible: "true",
+                heightStyle: "content"
+            });
+        });
+    </script>
+</head>
+
+<body>
+    
+    <!-- HEADER -->
+    <header id="cabecera">
+        <h1 class="encabezado">Jurassic Park</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Información</a></li>
+                <li><a href="reservas.html">Visitanos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- REPARTO DE LA PELICULA -->
+        <h2>-REPARTO-</h2>
+        <section id="personas">
+            <article class="col-left">
+                <a class="fancybox" rel="reparto" title="Foto de Jeff goldblum">
+                    <img src="../img/reparto/Jeff-goldblum.jpg" alt="Foto de Jeff-goldblum">
+                </a>
+                <a class="fancybox" rel="reparto" title="Foto de Laura Dern">
+                    <img src="../img/reparto/Laura Dern.jpg" alt="Foto de Laura Dern">
+                </a>
+                <a class="fancybox" rel="reparto" title="Foto de Richard Attenborough">
+                    <img src="../img/reparto/Richard-Attenborough.jpg" alt="Foto de Richard Attenborough">
+                </a>
+                <a class="fancybox" rel="reparto" title="Foto de Sam Neill">
+                    <img src="../img/reparto/Sam-Neill.jpg" alt="Foto de Sam-Neill">
+                </a>
+            </article>
+            <article class="col-right">
+                <h3>Jeff goldblum - Ian Malcolm</h3>
+                <div>
+                    <p>El Dr. Ian Malcolm es un matemático que se especializa en una rama de las matemáticas conocida como la "Teoría del caos", lo que lo lleva a su autodescripción como un "caótico". Es conocido principalmente por su participación altamente publicitada en el incidente de Isla Nublar de 1993, siendo la primera persona en hablar abiertamente sobre esos eventos. En menor grado, es conocido por su participación en el incidente de Isla Sorna en 1997 y su libro, Dios Crea a los Dinosaurios, sobre las formas en que la extinción se relaciona con la teoría del caos y otras disciplinas matemáticas. Debido a su participación en la historia de la des-extinción, sus opiniones sobre temas bioéticos son muy respetadas por el público y el gobierno de los Estados Unidos.</p>
+                </div>
+                <h3>Laura Dern - Dra. Ellen Degler</h3>
+                <div>
+                    <p>La Dra. Ellen "Ellie" Degler (apellido de soltera: Sattler) es una paleo-botánica y autora de ciencia de no ficción. Es mejor conocida por su trabajo junto al paleontólogo Alan Grant, y hasta cierto punto por ser testigo del incidente de Isla Nublar en 1993, del que ha intentado distanciarse.</p>
+                </div>
+                <h3>Richard Attenborough - Dr. John Alfred Hammond</h3>
+                <div>
+                    <p>El Dr. John Alfred Hammond, (o John Parker Hammond) (1913-1997/98), fue un empresario y fundador, director ejecutivo y presidente de International Genetic Technologies, Inc. y más tarde un activista de los derechos de los animales des-extintos.
+                    Es mejor conocido por planificar y construir parcialmente el revolucionario parque temático Jurassic Park, que finalmente se convirtió en Jurassic World. Hammond supervisó la des-extinción de la primera vida prehistórica, así como los orígenes de la hibridación genética avanzada, y se considera que fue un actor clave en la era genética temprana</p>
+                </div>
+                <h3>Sam Neill - Dr. Alan Grant</h3>
+                <div>
+                    <p>El Dr. Alan Grant es un paleontólogo especializado en la evolución y biología de Dinosaurios Deinonicosaurianos. Es también conocido por sus aclamados libros, Dinosaur Detectives y The Lost World of the Dinosaurs, así como por su participación con International Genetic Technologies en los incidentes de 1993 y 2001 en las islas costarricenses de Nublar y Sorna respectivamente.</p>
+                </div>
+            </article>
+        </section>
+        <hr>
+        
+        <!-- DINOSAURIOS PRINCIPALES -->
+        <h2>-DINOSAURIOS-</h2>
+        <section id="dinos">
+            <article class="col-right">
+                <h3>Tyrannosaurus rex</h3>
+                <div>
+                    <p>Frecuentemente conocido como «T. Rex». El soporte animatrónico creado por Winston pesaba 7900 kilogramos y tenía una longitud de 12 metros. En opinión del paleontólogo Jack Horner, esto era <cite>«lo más cercano que haya visto a un dinosaurio viviente»</cite>. El modelo fue creado con base al movimiento del dinosaurio, y sus rugidos provinieron de la mezcla de sonidos resultante de una cría de elefante, un aligátor y un cocodrilo. Para emular su respiración recurrieron al sonido de la respiración de una ballena. Para la escena en la que el Tyrannosaurus desgarra a un Gallimimus, se usó una pista de sonido en la que un perro ataca una pelota.</p>
+                </div>
+                <h3>Velociraptor</h3>
+                <div>
+                    <p>También conocido como «raptor». Winston explicó que no se habían basado en la especie Velociraptor mongoliensis descrita por las fuentes científicas para recrear al dinosaurio, sino en la especie Deinonychus. Bajo excusas estrictamente estéticas relacionadas con las escenas de acción de la película, Spielberg ordenó al equipo de diseño que aumentara el tamaño de los velociraptores para que así midieran unos 10 pies (3 m) de altura; poco antes del lanzamiento de la película, científicos descubrieron un ejemplar de un Utahraptor, parecido al velociraptor diseñado por Spielberg, a lo que Winston bromeó: <cite>«nosotros lo hicimos, pero ellos lo descubrieron»</cite>.</p>
+                </div>
+                <h3>Dilophosaurus</h3>
+                <div>
+                    <p>Fue creado con menores dimensiones con respecto a las del ejemplar real para evitar que la audiencia lo confundiera con los velociraptores. Su habilidad para escupir fluidos venenosos es ficticia. Para recrear sus sonidos vocales combinaron los sonidos provenientes de un cisne, un halcón, un mono aullador y una víbora de cascabel.</p>
+                </div>
+                <h3>Triceratops</h3>
+                <div>
+                    <p>Tuvieron una breve aparición en la película, por sugerencia de Winston. Winston también creó una cría de Triceratops para Ariana Richards, sin embargo la escena que mostraba la interacción entre este espécimen y la actriz fue descartada del montaje final.</p>
+                </div>
+            </article>
+            <article class="col-left">
+                <a class="fancybox" rel="dinosaurios" title="Imágen de un Tyrannosaurus rex">
+                    <img src="../img/dinosaurios/t-rex.jpg" alt="Imágen de un Tyrannosaurus rex">
+                </a>
+                <a class="fancybox" rel="dinosaurios" title="Imágen de un Velociraptor">
+                    <img src="../img/dinosaurios/velociraptor.jpg" alt="Imágen de un Velociraptor">
+                </a>
+                <a class="fancybox" rel="dinosaurios" title="Imágen de un Dilophosaurus">
+                    <img src="../img/dinosaurios/dilophosaurus.jpg" alt="Imágen de un Dilophosaurus">
+                </a>
+                <a class="fancybox" rel="dinosaurios" title="Imágen de un Triceratops">
+                    <img src="../img/dinosaurios/triceratops.jpg" alt="Imágen de un Triceratops">
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="persona">
+            <h4 class="nombre"><i>Velez Ignacio</i></h4>
+            <p class="curso">Curso de Programación Web</p>
+        </div>
+        <div class="newslatter">
+            <h4>¡Suscribete a nuestro Newslatter!</h4>
+            <form>
+                <input type="email" placeholder="Email" class="newslatter-input" required>
+                <input type="submit" value="ENVIAR" class="btn-enviar">
+            </form>
+        </div>
+    </footer>
+
+</body>
+
+</html>

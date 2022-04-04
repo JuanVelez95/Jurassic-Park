@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic Park | Fan Page</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/Jurassic-Park-Logo.png" type="image/x-icon">
+    <!-- Tema para JQueryUI -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+    <!-- Link a CSS externo -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- CDN JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Libreria JQueryUI -->
+    <script src="../js/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+    <!-- Formulario plugin files -->
+    <link rel="stylesheet" href="../plug-in/Minimal-Side-Feedback-Form-Using-jQuery-Bootstrap-feedback-js/feedback.css">
+    <script src="../plug-in/Minimal-Side-Feedback-Form-Using-jQuery-Bootstrap-feedback-js/feedback.js"></script>
+    <!-- Link a las Media Queries -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script>
+        $().ready(function () {
+            //Efecto de ítems del menú
+            $(".menu li").on("click", function () {
+                $(this).effect("puff", {}, 1000, function () {
+                    $(this).show();
+                });
+            });
+            //Slider
+            $("#slider").slider({
+                min: 0,
+                max: 10,
+                value: 0,
+                slide: function (e, ui) {
+                    $("#valor").text("¡Gracias por su valoración de " + ui.value + " puntos!");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="cabecera">
+        <h1 class="encabezado">Jurassic Park</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="info.html">Información</a></li>
+                <li><a href="reservas.html">Visitanos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- CONTENIDO PRINCIPAL -->
+        <section id="contacto">
+            <article class="maps">
+                <h2 class="maps-title">¡Jurassic Park: The Ride!</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6071.469351604173!2d-81.47369797663133!3d28.469177036957525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77f1e6b837501%3A0xd4dbf39a74964ee0!2sJurassic%20Park%3A%20The%20Ride!5e0!3m2!1ses-419!2ses!4v1648899404689!5m2!1ses-419!2ses"
+                    width="400" height="300" style="border:0; border-radius: 2em;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="https://www.google.com/maps/place/Jurassic+Park:+The+Ride/@28.469177,-81.473698,16.21z/data=!4m9!1m2!2m1!1sjurassic+park!3m5!1s0x88e77f1e6b837501:0xd4dbf39a74964ee0!8m2!3d28.470722!4d-81.4732914!15sCg1qdXJhc3NpYyBwYXJrWg8iDWp1cmFzc2ljIHBhcmuSARNhbXVzZW1lbnRfcGFya19yaWRlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJoTlVrdE9YVlJSUkFC"
+                    class="maps-page">Ver en Google Maps</a>
+            </article>
+            <article class="datos">
+                <h3>Direccion</h3>
+                <p>6000 Universal Blvd, Orlando, FL 32819, Estados Unidos</p>
+                <h3>Telefono de contacto</h3>
+                <p>+14073638000</p>
+                <h3>Sitio Web Oficial</h3>
+                <a
+                    href="https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/jurassic-park-river-adventure">Universal
+                    Orlando</a>
+            </article>
+        </section>
+
+        <section id="section-slider">
+            <article>
+                <div id="slider"></div>
+                <p id="valor">¡Por favor valore mi página web del 1 al 10!</p>
+                <form>
+                    <input type="submit" value="CALIFICAME" class="btn-calificar">
+                </form>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <div id="feedback">
+                    <div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
+                        <form class="form panel-body">
+                            <div class="form-group">
+                                <label for="email">Nombre </label><span class="rojo">*</span><br />
+                                <input id="campo1" class="form-control" name="nombre" autofocus placeholder="Nombre" type="text" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email </label><span class="rojo">*</span><br />
+                                <input id="campo2" class="form-control" name="email" autofocus placeholder="E-mail" type="email" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto </label><span class="rojo">*</span><br />
+                                <input id="campo3" class="form-control" name="asunto" autofocus placeholder="Asunto" type="text" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Mensaje </label><span class="rojo">*</span><br />
+                                <textarea id="campo4" class="form-control" name="asunto" required placeholder="Escriba aqui su mensaje" rows="5"></textarea>
+                            </div>
+                            <p>LOS CAMPOS CON <span class="rojo">*</span> SON OBLIGATORIOS.</p>
+                            <input type="submit" value="ENVIAR" class="btn-form">
+                        </form>
+                    </div>
+                    <div id="feedback-tab">Contacto</div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="persona">
+            <h4 class="nombre"><i>Velez Ignacio</i></h4>
+            <p class="curso">Curso de Programación Web</p>
+        </div>
+        <div class="newslatter">
+            <h4>¡Suscribete a nuestro Newslatter!</h4>
+            <form>
+                <input type="email" placeholder="Email" class="newslatter-input" required>
+                <input type="submit" value="ENVIAR" class="btn-enviar">
+            </form>
+        </div>
+    </footer>
+
+</body>
+
+</html>

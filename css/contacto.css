@@ -1,0 +1,94 @@
+#contacto{
+    display: flex;
+    justify-content: space-around;
+}
+
+.maps{
+    display: flex;
+    flex-direction: column;
+}
+
+.maps-title{
+    font-size: 2.4em;
+}
+
+.maps iframe{
+    margin: 1em;
+}
+
+.maps-page{
+    color: black;
+    font-family: 'Red Hat Mono';
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.datos{
+    text-align: center;
+    font-family: 'Red Hat Mono';
+}
+
+.datos h3{
+    font-family: 'jurassic_parkregular';
+    letter-spacing: .2em;
+    font-size: 2.4em;
+    margin: 1em 0 1em 0;
+    text-decoration: underline;
+}
+
+.datos p, .datos a{
+    color: black;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+#section-slider{
+    text-align: center;
+    padding: 2em 0 2em 0;
+}
+
+#slider{
+    width: 50%;
+    margin: auto;
+}
+
+#valor{
+    margin: .5em 0 .5em 0;
+    text-align: center;
+}
+
+.btn-calificar{
+    padding: .3em;
+    font-size: 1em;
+    background-color: #443113;
+    color: white;
+}
+
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rojo{
+    color: red;
+    font-size: 1.5em;
+}
+
+.btn-form{
+    padding: .3em;
+    font-size: 1em;
+    background-color: #4f4221;
+    color: #efec9f;
+    width: 10em;
+    margin: auto;
+}
+
+.form-control{
+    padding-left: .2em;
+    font-family: 'Red Hat Mono';
+    font-weight: 600;
+    font-size: 1.1em;
+}

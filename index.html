@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic Park | Fan Page</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/Jurassic-Park-Logo.png" type="image/x-icon">
+    <!-- Tema para JQueryUI -->
+    <link rel="stylesheet" href="js/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+    <!-- Link a CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CDN JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Libreria JQueryUI -->
+    <script src="js/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+    <!-- jQuery Riot Slider Plugin Files -->
+    <link rel="stylesheet" href="plug-in/responsive-carousel-riot/riot-slider.min.css">
+    <script src="plug-in/responsive-carousel-riot/riot-slider.min.js"></script>
+    <!-- Link a las Media Queries -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        $().ready(function () {
+//Efecto de ítems del menú
+            $(".menu li").on("click", function () {
+                $(this).effect("puff", {}, 1000, function () {
+                    $(this).show();
+                });
+            });
+//Tabs 
+            $("#tabs").tabs();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="cabecera">
+        <h1 class="encabezado">Jurassic Park</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="html/info.html">Información</a></li>
+                <li><a href="html/reservas.html">Visitanos</a></li>
+                <li><a href="html/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- CARRUSEL -->
+        <ul class="riot-slider"
+            data-use-material-icons="true"
+            data-is-auto-play="true"
+            data-do-show-buttons="true"
+            data-do-swipe-on-touchscreen="true"
+            data-button-number-display="default"
+            data-previous-next-display="both"
+            data-theme="dark"
+            data-slide-hold-seconds="5">
+            <li style="padding-top: 1em">
+                <img src="img/img-carrusel-1.jpg" alt="escena de la pelicula" class="slider-img" title="En esta escena vemos que a pesar de tener jaulas de contención con la máxima seguridad, armas y mucho personal hay algo que nos enseña que no se puede burlar a estos animales.">
+            </li>
+            <li style="padding-top: 1em">
+                <img src="img/img-carrusel-2.jpg" alt="escena de la pelicula" class="slider-img" title="En esta escena se bajan los paleantologos asombrados, porque el doctor Hammond pudo recrear una escena prehistórica en la actualidad.">
+            </li>
+            <li style="padding-top: 1em">
+                <img src="img/img-carrusel-3.jpg" alt="escena de la pelicula" class="slider-img" title="En esta escena Hammond busca la opinión de los dos mejores paleantologos, el profesor de ciencias y un abogado, los pro y contras de abrir un parque. La resolución fue que no es bueno jugar a ser dios, por algo se habían extinto los dinosaurios">
+            </li>
+            <li style="padding-top: 1em">
+                <img src="img/img-carrusel-4.jpg" alt="escena de la pelicula" class="slider-img" title="En esta escena John ve a su dinosaurio preferido y se da cuenta que se indigesto con una semilla que al parecer no era de la era jurásica, primer error de Hammond.">
+            </li>
+        </ul>
+
+        <!-- PESTAÑAS -->
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs1">Jurassic Park</a></li>
+                <li><a href="#tabs2">The Lost World: Jurassic Park</a></li>
+                <li><a href="#tabs3">Jurassic Park III</a></li>
+            </ul>
+            <div id="tabs1">
+                <p>Jurassic Park es una película de ciencia ficción y aventuras dirigida por el cineasta estadounidense
+                    Steven Spielberg y estrenada en 1993. Su trama está basada en el libro homónimo de Michael Crichton
+                    y relata las vivencias de un grupo de personas en un parque de diversiones con dinosaurios clonados,
+                    creado por un filántropo multimillonario y un equipo de científicos genetistas. Durante una visita
+                    de evaluación antes de su apertura al público en general, los dinosaurios escapan y ponen en riesgo
+                    la vida de quienes se encuentran en el parque.</p>
+            </div>
+            <div id="tabs2">
+                <p>The Lost World: Jurassic Park es una película estadounidense de ciencia ficción y aventuras estrenada
+                    en 1997, segunda entrega de la franquicia de Parque Jurásico. Siendo la secuela de la película de
+                    1993 Parque Jurásico, el filme fue dirigido por Steven Spielberg y escrito por David Koepp,
+                    basándose de forma muy libre en la novela homónima de Michael Crichton. Jeff Goldblum, que repite en
+                    el papel del excéntrico matemático Ian Malcolm, encabeza un reparto que completan Julianne Moore,
+                    Pete Postlethwaite y Vince Vaughn. Goldblum es el único actor de la exitosa primera entrega que
+                    repite en un rol protagonista, aunque la película cuenta con cameos de Richard Attenborough como
+                    John Hammond y de Joseph Mazzello y Ariana Richards como sus nietos.</p>
+            </div>
+            <div id="tabs3">
+                <p>Jurassic Park III es una película estadounidense de ciencia ficción y aventuras estrenada en 2001,
+                    tercera entrega de la franquicia de Parque Jurásico. Sam Neill, William H. Macy, Téa Leoni,
+                    Alessandro Nivola, Trevor Morgan y Michael Jeter interpretan los papeles principales. Es la primera
+                    película de la franquicia que no dirigió Steven Spielberg y que no se basaba en una novela de
+                    Michael Crichton, aunque muchas de sus escenas están tomadas de las novelas Parque Jurásico y El
+                    mundo perdido. La historia se desarrolla en la ficticia isla Sorna, escenario de los acontecimientos
+                    del segundo filme, a donde viaja un matrimonio divorciado que ha contratado los servicios del
+                    paleontólogo Alan Grant para encontrar a su hijo desaparecido.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="persona">
+            <h4 class="nombre"><i>Velez Ignacio</i></h4>
+            <p class="curso">Curso de Programación Web</p>
+        </div>
+        <div class="newslatter">
+            <h4>¡Suscribete a nuestro Newslatter!</h4>
+            <form>
+                <input type="email" placeholder="Email" class="newslatter-input" required>
+                <input type="submit" value="ENVIAR" class="btn-enviar">
+            </form>
+        </div>
+    </footer>
+
+</body>
+
+</html>

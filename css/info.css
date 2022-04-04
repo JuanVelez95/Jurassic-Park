@@ -1,0 +1,45 @@
+main{
+    background-color: #efec9f;
+}
+
+#personas, #dinos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2{
+    font-family: 'jurassic_parkregular';
+    letter-spacing: .2em;
+    text-align: center;
+    font-size: 6em;
+    padding: .5em 0 .5em 0;
+    text-decoration: underline;
+}
+
+.col-left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.fancybox{
+    margin: 1em;
+}
+
+.fancybox img{
+    width: 12.5em;
+    height: 18.75em;
+    border-radius: 3em;
+}
+
+.col-right{
+    width: 38.508em;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.col-right h3{
+    font-family: 'Red Hat Mono';
+}

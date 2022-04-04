@@ -1,0 +1,66 @@
+/* IMPORT */
+@import url('responsive/res-info.css');
+@import url('responsive/res-reservas.css');
+@import url('responsive/res-contacto.css');
+
+@media (max-width: 600px) {
+    #cabecera{
+        justify-content: space-evenly;
+    }
+    .encabezado{
+        font-size: 4em;
+    }
+    .menu li{
+        font-size: .75em;
+        padding: .5em;
+    }
+    #tabs{
+        font-size: .75em;
+    }
+    .nombre{
+        font-size: 1em;
+        letter-spacing: .5em;
+    }
+    .newslatter{
+        flex-direction: column;
+    }
+    .newslatter h4, .newslatter-input{
+        font-size: .85em;
+    }
+    .newslatter form{
+        text-align: center;
+    }
+    .btn-enviar{
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    #cabecera{
+        justify-content: space-evenly;
+    }
+    .encabezado{
+        font-size: 5.5em;
+    }
+    .nombre{
+        font-size: 1.4em;
+    }
+    .newslatter h4{
+        font-size: 1em;
+    }
+    .btn-enviar{
+        margin-top: .5em;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1240px){
+    .nombre{
+        font-size: 1.7em;
+    }
+    .newslatter h4{
+        font-size: 1.2em;
+    }
+    .btn-enviar{
+        margin-top: .5em;
+    }
+}

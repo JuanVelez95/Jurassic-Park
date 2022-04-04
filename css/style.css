@@ -1,0 +1,119 @@
+/* IMPORT */
+
+@import url('info.css');
+@import url('reservas.css');
+@import url('contacto.css');
+
+/* FUENTES */ 
+
+@import url('../fuentes/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Red+Hat+Mono:wght@300&display=swap');
+
+/* ESTILOS */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-family: 'Red Hat Mono';
+    letter-spacing: -1px;
+}
+
+#cabecera{
+    background: #443113 url("https://static.vecteezy.com/system/resources/previews/002/124/300/large_2x/old-dark-brown-wooden-texture-background-free-photo.jpg");
+    height: 17.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.encabezado{
+    text-align: center;
+    font-size: 8em;
+    margin: .2em 0 .4em 0;
+    letter-spacing: .3em;
+    font-family: 'jurassic_parkregular';
+    color: #efec9f;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.menu li{
+    padding: 1em;
+    border: solid white 2px;
+    font-family: 'Red Hat Mono';
+    background-color: #4f4221;
+}
+
+.menu li:hover{
+    background-color: #baaa5a;
+    border: solid 2px #4f4221;
+}
+
+.menu li a{
+    color: white;
+    text-decoration: none;
+}
+
+.slider-img{
+    max-width: 100%;
+}
+
+#tabs a{
+    font-family: 'Red Hat Mono';
+    letter-spacing: 5px;
+}
+
+footer{
+    height: 10em;
+    background-color: #4f4221;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+.persona{
+    width: 30%;
+}
+.nombre{
+    font-family: 'Bungee Shade', cursive; 
+    padding: .5em 0 .5em 0;
+    font-size: 2em;
+}
+
+.curso{
+    padding-left: .5em;
+}
+
+.newslatter{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Red Hat Mono';
+}
+
+.newslatter-input{
+    font-size: 1.2em;
+    text-indent: .2em;
+}
+
+.newslatter h4{
+    width: 35%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.btn-enviar{
+    padding: .3em;
+    font-size: 1em;
+    background-color: #443113;
+    color: white;
+}
